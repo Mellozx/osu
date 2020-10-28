@@ -15,6 +15,8 @@ using osu.Game.Users;
 using LogLevel = osu.Framework.Logging.LogLevel;
 using User = osu.Game.Users.User;
 
+
+// change this to OsuX
 namespace osu.Desktop
 {
     internal class DiscordRichPresence : Component
@@ -60,9 +62,9 @@ namespace osu.Desktop
                 activity.BindTo(u.NewValue.Activity);
             }, true);
 
+            activity.BindValueChanged(_ => updateStatus());
             ruleset.BindValueChanged(_ => updateStatus());
             status.BindValueChanged(_ => updateStatus());
-            activity.BindValueChanged(_ => updateStatus());
 
             client.Initialize();
         }
