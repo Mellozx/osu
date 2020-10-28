@@ -11,6 +11,7 @@ namespace osu.Game.Rulesets.Mania.Scoring
         {
             switch (result)
             {
+                // add functional new hitresults later
                 case HitResult.Perfect:
                 case HitResult.Great:
                 case HitResult.Good:
